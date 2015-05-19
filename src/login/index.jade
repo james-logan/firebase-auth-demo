@@ -1,0 +1,29 @@
+extends ../_layout
+
+block link
+     link(rel="stylesheet", href="../css/main.css")
+block title
+     title Firebase Auth Demo | Login
+block content
+     .onLoggedOut
+       .login
+         h1 Login
+         form
+           input(type='email' placeholder='email')
+           input(type='password' placeholder='password' required)
+           input(type='submit' value="Login")
+         button Register
+       .register.hidden
+         form
+           h1 REGISTER FOR THINGS
+           input(type='email' placeholder='email')
+           input(type='password' placeholder='password' required)
+           input(type='password' placeholder='password' required)
+           input(type='submit' value="REGISTER")
+         button Cancel
+
+     .onLoggedIn
+       h1 Hello {{EMAIL}}!
+       button Logout
+     a(href="/") Home
+     script(src="../js/main.js")
